@@ -3,25 +3,29 @@
 #include <iostream>
 
 // === БЛОК ПОДКЛЮЧЕНИЙ: каждый участник добавляет свой заголовочный файл ===
+
 #include "krivonosov.h"
+#include "scherbakov.h"
 
 // === КОНЕЦ БЛОКА ПОДКЛЮЧЕНИЙ ===
-
 using namespace std;
-
 int main() {
-	int choice;
 
+	int choice;
 	do {
 		cout << "\n=== Командный проект: сборник расчётов ===\n";
+		// === БЛОК МЕНЮ: каждый участник добавляет свои пункты ===
 		cout << "1. Количество теплоты Q = c*m*dt\n";
 		cout << "2. Изменение температуры dt = Q/(c*m)\n";
+		cout << "3. Скорость падения\n";
+		cout << "4. Высота падения\n";
+		cout << "5. Время падения\n";
 		cout << "0. Выход\n";
 		cout << "Выберите пункт: ";
-
 		cin >> choice;
 
 		switch (choice) {
+			// === БЛОК ОБРАБОТКИ: каждый участник добавляет свои case ===
 		case 1:
 			cout << "Введите удельную теплоемкость (джоуль на кельвин) c: ";
 			cin >> c;
@@ -48,12 +52,30 @@ int main() {
 					<< tempChange(Q, c, m) << "\n";
 			}
 			break;
-case 0:
-cout << "Работа завершена.\n";
-break;
-default:
-cout << "Такого пункта нет.\n";
-}
-} while (choice != 0);
-return 0;
+		case 3:
+			cout << "\nВведите массу";
+			cin >> mass;
+			cout << "\nСкорость падения= " << fallSpeed(mass) << "\n";
+			break;
+
+		case 4:
+			cout << "\nВведите высоту";
+			cin >> hight;
+			cout << "\nВысота Падения= " << fallHeight(hight) << "\n";
+			break;
+		case 5:
+			cout << "\nВведите высоту";
+			cin >> hight;
+			cout << "\nВремя Падения= " << fallTime(hight) << "\n";
+			break;
+
+		case 0:
+			cout << "Работа завершена.\n";
+			break;
+		default:
+			cout << "Такого пункта нет.\n";
+		}
+	} while (choice != 0);
+
+	return 0;
 }
