@@ -4,7 +4,7 @@
 
 // === БЛОК ПОДКЛЮЧЕНИЙ: каждый участник добавляет свой заголовочный файл ===
 #include "krivonosov.h"
-#include "scherbakov.h"
+
 // === КОНЕЦ БЛОКА ПОДКЛЮЧЕНИЙ ===
 
 using namespace std;
