@@ -3,6 +3,7 @@
 #include <iostream>
 
 // === БЛОК ПОДКЛЮЧЕНИЙ: каждый участник добавляет свой заголовочный файл ===
+
 #include "krivonosov.h"
 #include "scherbakov.h"
 
